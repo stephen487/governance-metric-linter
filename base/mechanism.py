@@ -73,7 +73,8 @@ def report(findings, registry):
         conds = " ; ".join(
             f"{c['text']} [{c['citation']}; {c['url']}]" for c in conditions.get(f.measure_id, [])
         )
-        rows.append((f.measure_id, str(f.line), f.matched_text, conds))
+        # A wrapped match shows on one line: whitespace (including a line break) becomes a single space.
+        rows.append((f.measure_id, str(f.line), " ".join(f.matched_text.split()), conds))
     w0 = max(len(r[0]) for r in rows)
     w1 = max(len(r[1]) for r in rows)
     w2 = max(len(r[2]) for r in rows)

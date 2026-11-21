@@ -1,0 +1,29 @@
+Example Lending Ltd
+Fairness and explainability audit: personal loan scoring model, version 3.2
+Fictional sample for a software demonstration. No real people or data.
+
+1. Scope
+The model scores personal loan applications. This report covers approval outcomes for the 2026 review period.
+
+2. Fairness results
+Approval rates were compared across applicant groups. The approval rate for Group B was 0.74 of the rate for Group A, which the team recorded against the 80% rule.
+A second check applied the four-fifths
+rule to the same groups and reached the same conclusion.
+Reviewers said four-fifths of reviewers agreed that the outcome was acceptable.
+
+The status panel stays lime green while the check passes.
+
+3. Explainability
+Individual decisions were explained with SHAP, which attributes each score to the input features.
+
+The explanation step runs as follows:
+    import shap
+    explainer.shap_values(applicants)
+
+A cross-check was run with LIME on 200 declined applications, using local interpretable model-agnostic explanations.
+
+4. Limitations
+The explanation methods are post hoc. Their outputs were not checked against independent ground truth in this review.
+Sampling covered one review period only.
+
+Sign-off: model risk team, Example Lending Ltd.

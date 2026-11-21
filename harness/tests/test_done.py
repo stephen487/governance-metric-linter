@@ -7,6 +7,8 @@
 - Report: each finding's measure id and line number appear in the output.
 - What is left: one NOT BUILT test per open item in BRIEF.md.
 """
+import pathlib
+
 import pytest
 
 from base import mechanism
@@ -212,6 +214,22 @@ def test_report_shows_citation_and_url_for_each_condition():
 
 def test_report_with_no_findings_says_so():
     assert "No registry measures found" in report([], load_registry())
+
+
+# --- demo: the recorded demo output must match a fresh scan ------------------
+
+DEMO_DIR = pathlib.Path(__file__).resolve().parents[2] / "demo"
+
+
+def test_demo_scan_matches_expected_output():
+    text = (DEMO_DIR / "sample_audit.txt").read_text(encoding="utf-8")
+    got = sorted((f.measure_id, f.line) for f in scan(text))
+    expected = []
+    for row in (DEMO_DIR / "EXPECTED_OUTPUT.txt").read_text(encoding="utf-8").splitlines():
+        parts = row.split()
+        if len(parts) >= 2 and parts[1].isdigit():
+            expected.append((parts[0], int(parts[1])))
+    assert got == sorted(expected), f"demo drifted. fresh scan: {got}; recorded: {sorted(expected)}"
 
 
 # --- what is left (BRIEF.md): one NOT BUILT test per open item ----------------
