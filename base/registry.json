@@ -1,0 +1,106 @@
+{
+  "_note": "Conditions are cited from the papers the World Privacy Forum 2023 report 'Risky Analysis' cites. Each quote is a short excerpt as supplied, not yet checked word for word against the paper. See base/README.md.",
+  "measures": [
+    {
+      "id": "four_fifths_rule",
+      "names": [
+        "four-fifths rule",
+        "four-fifth rule",
+        "4/5ths rule",
+        "4/5th rule",
+        "4/5 rule",
+        "80% rule",
+        "80 % rule",
+        "80 percent rule",
+        "80 per cent rule",
+        "eighty percent rule",
+        "eighty per cent rule",
+        "disparate impact ratio",
+        "adverse impact ratio"
+      ],
+      "conditions": [
+        {
+          "text": "Recasting the four-fifths rule as an AI fairness metric introduces new potential for ethical harms.",
+          "citation": "Watkins, McKenna, Chen (2022). The four-fifths rule is not disparate impact: a woeful tale of epistemic trespassing in algorithmic fairness.",
+          "url": "https://arxiv.org/abs/2202.09519",
+          "quote": "incorrectly introduces a new deontic nuance and new potentials for ethical harms"
+        }
+      ]
+    },
+    {
+      "id": "shap",
+      "names": [
+        "SHAP",
+        "shap",
+        "shap_values",
+        "KernelSHAP",
+        "TreeSHAP",
+        "DeepSHAP",
+        "LinearSHAP",
+        "GradientSHAP",
+        "Shapley additive explanations",
+        "Shapley value",
+        "Shapley values"
+      ],
+      "conditions": [
+        {
+          "text": "Shapley values used as feature importance raise mathematical problems.",
+          "citation": "Kumar, Venkatasubramanian, Scheidegger, Friedler (2020). Problems with Shapley-value-based explanations as feature importance measures. ICML.",
+          "url": "https://arxiv.org/abs/2002.11097",
+          "quote": "We show that mathematical problems arise when Shapley values are used for feature importance"
+        },
+        {
+          "text": "Shapley values miss information about model predictions that the authors' Shapley residuals capture.",
+          "citation": "Kumar, Scheidegger, Venkatasubramanian, Friedler (2021). Shapley Residuals: Quantifying the limits of the Shapley value for explanations. NeurIPS.",
+          "url": "https://nips.cc/virtual/2021/poster/28660",
+          "quote": "demonstrate that they capture information about model predictions that Shapley values cannot."
+        },
+        {
+          "text": "Explanation methods that rely on input perturbations, including LIME and SHAP, are not reliable.",
+          "citation": "Slack, Hilgard, Jia, Singh, Lakkaraju (2020). Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods. AIES.",
+          "url": "https://arxiv.org/abs/1911.02508",
+          "quote": "post hoc explanations techniques that rely on input perturbations, such as LIME and SHAP, are not reliable"
+        },
+        {
+          "text": "Model-agnostic interpretation methods can lead to wrong conclusions when applied incorrectly.",
+          "citation": "Molnar et al. (2022). General Pitfalls of Model-Agnostic Interpretation Methods for Machine Learning Models.",
+          "url": "https://arxiv.org/abs/2007.04131",
+          "quote": "can lead to wrong conclusions if applied incorrectly"
+        }
+      ]
+    },
+    {
+      "id": "lime",
+      "names": [
+        "LIME",
+        "local interpretable model-agnostic explanations",
+        "import lime",
+        "from lime import",
+        "lime_tabular",
+        "lime_image",
+        "lime_text",
+        "LimeTabularExplainer",
+        "LimeImageExplainer",
+        "LimeTextExplainer"
+      ],
+      "exact_names": [
+        "import lime",
+        "from lime import"
+      ],
+      "conditions": [
+        {
+          "text": "Explanation methods that rely on input perturbations, including LIME and SHAP, are not reliable.",
+          "citation": "Slack, Hilgard, Jia, Singh, Lakkaraju (2020). Fooling LIME and SHAP: Adversarial Attacks on Post hoc Explanation Methods. AIES.",
+          "url": "https://arxiv.org/abs/1911.02508",
+          "quote": "post hoc explanations techniques that rely on input perturbations, such as LIME and SHAP, are not reliable"
+        },
+        {
+          "text": "When the explanation is made very local, LIME's surrogate model can degenerate.",
+          "citation": "Gaudel, Galárraga, Delaunay, Rozé, Bhargava (2022). s-LIME: Reconciling Locality and Fidelity in Linear Explanations. IDA.",
+          "url": "https://arxiv.org/abs/2208.01510",
+          "quote": "with the current design of LIME, the surrogate model may degenerate when the explanation is too local"
+        }
+      ]
+    }
+  ]
+}
