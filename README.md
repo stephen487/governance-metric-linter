@@ -66,6 +66,10 @@ Read `BRIEF.md` for the full idea. The open work, as listed there:
 - Emit machine-readable output (JSON) so the linter can run in CI and fail a build.
 - Tell a measure used as evidence apart from a measure only mentioned (for example in a list of limitations), and report which it is.
 
+## Claiming a piece of work
+
+Before you start one of the items above, open an issue on this repository titled `Claiming: <item>` (for example `Claiming: PDF input`). That way two people do not build the same thing in parallel and only find out at the end. The first claim wins. A claim lapses after two weeks with no activity on its issue, and anyone may then claim the item.
+
 ## Limits
 
 - Detection is by name only. The base finds the listed names and does not understand how a measure is used. Wrapped phrases and hyphen or space variants match only inside the listed names.
