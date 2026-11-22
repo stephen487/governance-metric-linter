@@ -31,6 +31,14 @@ The UK government's roadmap for trusted third-party AI assurance says: "as much 
 
 Fairness toolkits compute these measures, but none found in a light search (see EXISTENCE.md) flags their misuse.
 
+## People asking
+
+- News article quoting a practitioner (HR Brew), 2022-04-01: "until AI audits look more like the audits in other industries... the words 'AI audits' are meaningless" (https://www.hr-brew.com/stories/2022/04/01/what-does-an-audit-for-bias-in-automated-hiring-tech-really-mean)
+
+What the search reported, word for word: "The searches returned no Reddit, Hacker News, Stack Exchange, GitHub or LinkedIn posts from practitioners, only papers, vendor pages and news. The one entry is a practitioner quoted in an article, so demand evidence is weak."
+
+_Found by a quick web search on 2026-11-22. Ideas, not guarantees: we have not validated a market._
+
 ## What the base does today
 
 The `base/` folder finds three measures by name in plain text: the four-fifths rule, SHAP and LIME. For each match it reports the measure, the line number, the matched text, and the cited reasons from the registry. Each reason is printed with its text, its citation and a link. The quote is kept in the registry but not printed in the report.
